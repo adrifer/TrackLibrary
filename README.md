@@ -16,7 +16,7 @@ Hasta ahora TrackLibrary contiene:
 ### JsonStorageService
 Para guardar un elemento y cargarlo sería:
 
-  using TrackLibrary.W8.Services;
+	using TrackLibrary.W8.Services;
 	
 	IStorageService<Producto> storageService = new JsonStorageService<Producto>();
 	
@@ -44,7 +44,7 @@ Ejemplo para crear live tiles desde una lista de elementos
 	list.Add(new Persona(){Nombre = "Olivia", Apellido = "Dunham"});
 	
 	// Le pasamos la lista de objetos que queremos tener como tiles
-	// y ademas le matamos un methodo que dado un objeto de ese tipo
+	// y ademas le pasamos un método que dado un objeto de ese tipo
 	// devuelva un tile ya creado para cada objeto en la lista.
 	tileService.SetCollectionLiveTile<Persona>(list, persona =>
 	{
