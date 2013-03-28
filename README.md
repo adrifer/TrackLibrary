@@ -48,11 +48,10 @@ Ejemplo para crear live tiles desde una lista de elementos
 	// devuelva un tile ya creado para cada objeto en la lista.
 	tileService.SetCollectionLiveTile<Persona>(list, persona =>
 	{
-	TileWideBlockAndText02 tile = new LiveTile.TileWideBlockAndText02();
-	tile.Text01 = persona.Nombre;
-	tile.Text02 = persona.Apellido;
-	
-	return tile;
+		TileWideBlockAndText02 tile = new LiveTile.TileWideBlockAndText02();
+		tile.Text01 = persona.Nombre;
+		tile.Text02 = persona.Apellido;
+		return tile;
 	});
 	
 	// Le decimos al servicio que actualice ya el LiveTile con los tiles
